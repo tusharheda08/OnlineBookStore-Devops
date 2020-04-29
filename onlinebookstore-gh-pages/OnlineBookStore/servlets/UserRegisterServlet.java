@@ -40,7 +40,7 @@ public class UserRegisterServlet extends GenericServlet {
 			} else {
 				RequestDispatcher rd = req.getRequestDispatcher("userreg");
 				rd.include(req, res);
-				pw.println("Sorry for interruption! Register again");
+				pw.println("Sorry for interruption! Register again new ");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
