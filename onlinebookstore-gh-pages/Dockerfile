@@ -1,11 +1,6 @@
-# use a node base image
-FROM openjdk
+FROM tomcat:alpine
 
 # set maintainer
 MAINTAINER Tushar Heda <tusharheda08@gmail.com>
 
-ADD onlinebookstore-0.0.1-SNAPSHOT.war onlinebookstore-0.0.1-SNAPSHOT.war
-
-ENTRYPOINT ["java", "-war", "onlinebookstore-0.0.1-SNAPSHOT.war"]
-
-EXPOSE 8090
+COPY onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/onlinebookstore-0.0.1-SNAPSHOT.war
